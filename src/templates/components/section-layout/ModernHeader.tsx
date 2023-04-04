@@ -67,21 +67,30 @@ export function ModernHeader({ styles, title, icon, children }: any) {
   );
 }
 
-export function ModernHeaderIntro({ styles, title, profiles, children }: any) {
+export function ModernHeaderIntro({
+  styles,
+  title,
+  profiles,
+  children,
+  displaySocial = true,
+}: any) {
   return (
     <SectionIntroHolder style={styles}>
       <FlexHVC className="header">
         <h1 className="header__title">{title}</h1>
       </FlexHVC>
-      <Flex className="social-icons">
-        {profiles
-          .filter((profile) => profile.url)
-          .map((profile: any) => (
-            <a href={profile.url} key={profile.url}>
-              {getIcon(profile.network)}
-            </a>
-          ))}
-      </Flex>
+      {displaySocial ? (
+        <Flex className="social-icons">
+          {profiles
+            .filter((profile) => profile.url)
+            .map((profile: any) => (
+              <a href={profile.url} key={profile.url}>
+                {getIcon(profile.network)}
+              </a>
+            ))}
+        </Flex>
+      ) : null}
+
       {children}
     </SectionIntroHolder>
   );

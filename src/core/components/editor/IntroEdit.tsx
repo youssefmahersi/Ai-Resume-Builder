@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Input as AntInput } from 'antd';
 import { MarkDownField } from 'src/core/widgets/MarkdownField';
-
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 const Wrapper = styled.div`
   margin: 8px 0;
 `;
@@ -49,6 +50,7 @@ export function IntroEdit({ METADATA, state, update }: any) {
           )}
         </Wrapper>
       ))}
+      <FormControlLabel control={<Switch defaultChecked />} label="Display Image" />
     </>
   );
 }

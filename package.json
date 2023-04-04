@@ -13,6 +13,9 @@
   "dependencies": {
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons": "^4.7.0",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.15",
     "antd": "^4.16.13",
     "array-move": "^4.0.0",
     "babel-preset-next": "^1.4.0",
